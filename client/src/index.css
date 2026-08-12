@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f7ff;
+  color: #1e1b4b;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Safety net against sideways scrolling on small screens.
+   `clip` (not `hidden`) keeps the sticky navbar working. */
+body {
+  overflow-x: clip;
+}
+
+@layer components {
+  /* Primary Sellora action button — indigo → violet gradient */
+  .btn-gradient {
+    background-image: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #ffffff;
+    box-shadow: 0 4px 14px -6px rgba(79, 70, 229, 0.5);
+    transition: box-shadow 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+  }
+  .btn-gradient:hover:not(:disabled) {
+    filter: saturate(1.08) brightness(1.04);
+    box-shadow: 0 10px 24px -8px rgba(79, 70, 229, 0.55);
+    transform: translateY(-1px);
+  }
+  .btn-gradient:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  /* Warm secondary accent — amber → pink */
+  .btn-warm {
+    background-image: linear-gradient(135deg, #f59e0b, #ec4899);
+    color: #ffffff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .btn-warm:hover:not(:disabled) {
+    box-shadow: 0 10px 24px -8px rgba(236, 72, 153, 0.5);
+    transform: translateY(-1px);
+  }
+
+  /* Gradient text used for section eyebrows / emphasis */
+  .text-gradient {
+    background-image: linear-gradient(135deg, #4f46e5, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Card surface used by listings and panels */
+  .card-sellora {
+    background-color: #ffffff;
+    border: 1px solid #e7e5f4;
+    border-radius: 1.125rem;
+    box-shadow: 0 1px 2px rgba(30, 27, 75, 0.04);
+    transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  }
+  .card-sellora:hover {
+    border-color: #c7d2fe;
+    box-shadow: 0 14px 34px -14px rgba(79, 70, 229, 0.32);
+    transform: translateY(-3px);
+  }
+}
+
+/* Hide scrollbar but keep scrollability */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Slim branded scrollbar for content areas */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f7ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7c3e8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a5a0d8;
+}
+
+/* Purple focus ring for text inputs, keeping native behaviour intact */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}

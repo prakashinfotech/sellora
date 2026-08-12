@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.env
+.env.*
+!.env.example
+/docs
+ 
+# compiled output
+/dist
+/node_modules
+/build
+/node_modules*
