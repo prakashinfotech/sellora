@@ -1,0 +1,102 @@
+{
+  "auth": {
+    "login": "Log In",
+    "register": "Create Account",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "name": "Full Name",
+    "phone": "Phone (optional)",
+    "city": "City (optional)",
+    "loginSuccess": "Logged in successfully!",
+    "registerSuccess": "Account created!",
+    "loginFailed": "Invalid email or password",
+    "registerFailed": "Registration failed",
+    "newToSellora": "New to Sellora?",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginHere": "Log in",
+    "registerHere": "Register",
+    "logging": "Logging in...",
+    "creating": "Creating..."
+  },
+  "ads": {
+    "postAd": "Post Your Ad",
+    "titleLabel": "Ad Title *",
+    "descriptionLabel": "Description",
+    "priceLabel": "Price (₹) *",
+    "categoryLabel": "Category *",
+    "cityLabel": "City",
+    "stateLabel": "State",
+    "photosLabel": "Photos (up to 5)",
+    "titlePlaceholder": "E.g. iPhone 13 Pro Max 256GB",
+    "descriptionPlaceholder": "Describe the item...",
+    "pricePlaceholder": "0",
+    "cityPlaceholder": "Mumbai",
+    "statePlaceholder": "Maharashtra",
+    "categoryPlaceholder": "Select category",
+    "postSuccess": "Ad posted successfully!",
+    "postFailed": "Failed to post ad",
+    "deleteSuccess": "Ad deleted",
+    "deleteFailed": "Failed to delete",
+    "updateFailed": "Failed to update status",
+    "deleteConfirm": "Delete this ad?",
+    "noAdsFound": "No results found",
+    "recommendedForYou": "Recommended for You",
+    "myAds": "My Ads",
+    "noMyAds": "You haven't posted any ads yet",
+    "markSold": "Mark Sold",
+    "markActive": "Mark Active",
+    "markedAs": "Marked as ",
+    "views": "views",
+    "showPhone": "Show Phone Number",
+    "notProvided": "Not provided",
+    "sellerInfo": "Seller Info",
+    "category": "Category",
+    "posting": "Posting...",
+    "searchingText": "Searching...",
+    "results": "results",
+    "resultsFor": "results for"
+  },
+  "categories": {
+    "browseCategories": "Browse Categories"
+  },
+  "favourites": {
+    "savedAds": "Saved Ads",
+    "noSavedAds": "No saved ads yet",
+    "toggleFailed": "Failed to update saved ads"
+  },
+  "upload": {
+    "uploadFailed": "Image upload failed"
+  },
+  "common": {
+    "sell": "Sell Now",
+    "login": "Login",
+    "myAds": "My Ads",
+    "searchPlaceholder": "Search cars, phones, furniture and more...",
+    "noRecordFound": "No records found",
+    "loading": "Loading...",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "postAd": "Post an Ad",
+    "currency": "₹",
+    "back": "Back",
+    "adNotFound": "Ad not found"
+  },
+  "validation": {
+    "requiredField": "This field is required",
+    "requiredEmail": "Email is required",
+    "notValidEmail": "Please enter a valid email",
+    "passwordMinLength": "Password must be at least 6 characters",
+    "nameRequired": "Name is required",
+    "priceRequired": "Price is required",
+    "categoryRequired": "Category is required",
+    "titleRequired": "Title is required"
+  },
+  "filters": {
+    "priceRange": "Price Range",
+    "minPrice": "Min ₹",
+    "maxPrice": "Max ₹"
+  }
+}

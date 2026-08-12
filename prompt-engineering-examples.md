@@ -1,6 +1,6 @@
 # Prompt Engineering Techniques — Examples
 
-All examples below use an OLX Clone / marketplace app context so they're directly relevant to this project.
+All examples below use the Sellora marketplace app context so they're directly relevant to this project.
 
 ---
 
@@ -86,7 +86,7 @@ Write a push notification message for a buyer.
 ## Context
 - The buyer messaged a seller about a "2019 Honda City"
 - The seller just replied
-- Platform name: OLX Clone
+- Platform name: Sellora
 - Tone: friendly, concise
 
 ## Output Format
@@ -125,7 +125,7 @@ Ask for multiple solutions, then pick the most common / best.
 ```
 I need to model "conversations" between buyers and sellers in PostgreSQL.
 Give me 3 different database schema approaches.
-After listing all 3, recommend which is best for an OLX-style app with high read volume.
+After listing all 3, recommend which is best for a Sellora-style marketplace app with high read volume.
 ```
 
 **When to use:** Architecture decisions, complex problems where one approach might be wrong.
@@ -167,7 +167,7 @@ Explore multiple reasoning branches before deciding. Good for design decisions.
 
 **Prompt:**
 ```
-I need to implement real-time chat for an OLX clone.
+I need to implement real-time chat for Sellora, a marketplace app.
 Explore 3 different approaches:
   A) WebSocket (Socket.io)
   B) Server-Sent Events (SSE)
