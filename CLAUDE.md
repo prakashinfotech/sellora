@@ -1,7 +1,7 @@
 # Sellora – Claude Code Project
 
 ## Project Overview
-Sellora is a full-stack marketplace web portal (buy/sell classifieds), built as part of the PSSPL AI Acceleration Month practical evaluation (8-day sprint, starting 2026-04-28). The UI is branded as **Sellora**; the repository folder, database name and other technical identifiers still use the original `olx*` naming and are intentionally left unchanged.
+Sellora is a full-stack marketplace web portal (buy/sell classifieds), built as part of the PSSPL AI Acceleration Month practical evaluation (8-day sprint, starting 2026-04-28). The project is branded **Sellora** throughout — UI, package names, database name, and container names. Use `sellora` naming for any new identifier; the earlier `olx*` naming has been retired.
 
 ## Tech Stack
 - **Frontend:** React 18 + TypeScript + Vite + Tailwind CSS
@@ -19,7 +19,7 @@ Sellora is a full-stack marketplace web portal (buy/sell classifieds), built as 
 
 ## Project Structure
 ```
-olxClone/
+sellora/
 ├── client/                  # React frontend (Vite, port 5173)
 │   └── src/
 │       ├── components/      # Reusable UI (Navbar, Footer, AdCard, PromoteModal, PrivateRoute)
@@ -118,7 +118,7 @@ See `.env.example` for all required vars. Copy to `.env` before running.
 # server/.env
 DB_HOST=localhost
 DB_PORT=5432
-DB_NAME=olx_clone
+DB_NAME=sellora
 DB_USER=postgres
 DB_PASS=yourpassword
 JWT_SECRET=your_jwt_secret

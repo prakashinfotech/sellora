@@ -4,7 +4,7 @@
 [![Frontend](https://img.shields.io/badge/Frontend-React_18_%2B_TypeScript-blue)](client)
 [![Backend](https://img.shields.io/badge/Backend-NestJS_10-e0234e)](server)
 [![Database](https://img.shields.io/badge/Database-PostgreSQL_15-336791)](server/src/database)
-[![API Docs](https://img.shields.io/badge/API_Docs-Swagger-85EA2D)](http://localhost:3000/api/docs)
+[![API Docs](https://img.shields.io/badge/API_Docs-Swagger-85EA2D)](#-api-reference)
 
 **Sellora** is a buy-and-sell classifieds marketplace for the Indian market — cars, motorcycles, mobiles, electronics, furniture, fashion, real estate, jobs, books & sports, and pets. It ships an end-user listing and discovery flow, buyer–seller messaging, Razorpay-backed ad promotion, and a role-gated admin panel.
 
@@ -196,7 +196,7 @@ npm run build   # nest build + tsc && vite build
 | `DB_HOST` / `DB_PORT` / `DB_NAME` / `DB_USER` / `DB_PASS` | PostgreSQL connection |
 | `JWT_SECRET` | Signing secret for access tokens |
 | `RAZORPAY_KEY_ID` / `RAZORPAY_KEY_SECRET` | Ad promotion payments |
-| `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` | Nodemailer OTP reset email |
+| `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` / `SMTP_FROM` | Nodemailer OTP reset email |
 | `PORT` | API port (default `3000`) |
 
 `client/.env` — see [client/.env.example](client/.env.example):
@@ -325,7 +325,9 @@ chore: update sequelize migration for messages
 | Deployment / CI | ❌ Not started |
 
 ### Known Issues
-- **`razorpay` is missing from [server/package.json](server/package.json).** It is imported by `payments.service.ts` and present in `node_modules` locally, so a fresh `npm install` will fail to build the backend until it is added as a dependency.
+- **`razorpay` is missing from [server/package.json](server/package.json).** It is imported by [payments.service.ts](server/src/payments/payments.service.ts) and present in `node_modules` locally, so a fresh `npm install` on a clean machine will fail to build the backend until it is added as a dependency.
+- **`cloudinary` is declared as a dependency but imported nowhere.** Image upload runs entirely through Multer disk storage; the dependency is a leftover and can be dropped.
+- **CORS origin is hardcoded** to `http://localhost:5173` in [server/src/main.ts](server/src/main.ts) rather than read from an env var — it must be changed in code before any non-local deployment.
 
 ---
 
