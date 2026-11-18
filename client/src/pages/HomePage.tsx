@@ -129,9 +129,30 @@ export default function HomePage() {
   };
 
   // Split ads into the home page's sections
-  const freshAds = ads.slice(0, 20);
-  const carAds = ads.filter((a) => a.category?.slug === 'cars').slice(0, 4);
-  const mobileAds = ads.filter((a) => a.category?.slug === 'mobile-phones').slice(0, 4);
+//  const freshAds = ads.slice(0, 20);
+//  const carAds = ads.filter((a) => a.category?.slug === 'cars').slice(0, 4);
+//  const mobileAds = ads.filter((a) => a.category?.slug === 'mobile-phones').slice(0, 4);
+
+
+
+
+// Split ads into the home page's sections
+// Protect the UI if the API/Redux state temporarily returns an unexpected value.
+const safeAds = Array.isArray(ads) ? ads : [];
+
+const freshAds = safeAds.slice(0, 20);
+const carAds = safeAds
+  .filter((a) => a.category?.slug === 'cars')
+  .slice(0, 4);
+
+const mobileAds = safeAds
+  .filter((a) => a.category?.slug === 'mobile-phones')
+  .slice(0, 4);
+
+
+
+
+
 
   return (
     <div className="bg-sellora-bg min-h-screen">
