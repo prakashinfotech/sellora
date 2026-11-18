@@ -271,7 +271,7 @@ jobs:
             echo "Checking $url ($mode)..."
 
             for i in $(seq 1 20); do
-              code=$(curl -s -o /dev/null -w "%{http_code}" "$url" || true)
+              code=$(curl -s -m 20 -o /dev/null -w "%{http_code}" "$url" || true)
               limit=400
               [ "$mode" = up ] && limit=500
               if [ "$code" -ge 200 ] && [ "$code" -lt "$limit" ]; then
